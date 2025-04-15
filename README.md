@@ -6,7 +6,7 @@ with the Yelling App example from Chapter 3 in the book [Kafka Streams in Action
 You can start the local Kafka cluster using the following command:
 
 ```sh
-$ docker-compose up
+$ docker compose up
 ```
 
 Be aware that we are using Kafka and Zookeeper containers provided by Confluent from now on, which are different from the previous labs (see [docker-compose.yml](/docker-compose.yml))!
@@ -26,7 +26,7 @@ and for each value arriving at this stream, print its value. It also transforms 
 Once the Kafka Streams application is running, open a new shell tab and produce some data to the source topic (`src-topic`).
 
 ```sh
-$ docker-compose exec kafka bash
+$ docker compose exec kafka bash
 
 $ kafka-console-producer \
     --bootstrap-server kafka:9092 \
@@ -55,7 +55,7 @@ HELLO IZZY
 You can additionally directly listen to the 'src-topic' and/or 'out-topic' in Kafka in a new shell:
 
 ```sh
-$ docker-compose exec kafka bash
+$ docker compose exec kafka bash
 
 $ kafka-console-consumer \
     --bootstrap-server kafka:9092 \
