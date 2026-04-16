@@ -23,7 +23,7 @@ public class YellingApp {
 
         Properties config = new Properties();
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, "yelling_app");
-        config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:29092");
         config.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         Serde<String> stringSerde = Serdes.String();
